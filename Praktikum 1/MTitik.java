@@ -1,22 +1,35 @@
-public class MTitik{
-    public static void main(String[] args){
-       
-        Titik t1 = new Titik();
-        t1.setAbsis(1);
-        t1.setOrdinat(2);
+public class Titik{
+    double absis;
+    double ordinat;
+    static double counterTitik;
 
-        Titik t2 = new Titik();
-        t2.setAbsis(3);
-        t2.setOrdinat(4);
-
-        Titik t3 = new Titik();
-        t3.setAbsis(5);
-        t3.setOrdinat(6);
-
-        System.out.println("Jumlah Objek Titik : " + Titik.getCounterTitik());
-        System.out.println("L1(" + t1.getAbsis() + ", " + t1.getOrdinat() + ")");
-        System.out.println("L2(" + t2.getAbsis() + ", " + t2.getOrdinat() + ")");
-        System.out.println("L3(" + t3.getAbsis() + ", " + t3.getOrdinat() + ")");
+    Titik(){
+        absis = 0;
+        ordinat = 0;
+        counterTitik++;
     }
-    
+
+    Titik(double a, double o){
+        absis = a;
+        ordinat = o;
+        counterTitik++;
+    }
+
+    void setAbsis(double a){
+        absis = a;
+    }
+    void setOrdinat(double o){
+        ordinat = o;
+    }
+    double getAbsis(){
+        return absis;
+    }
+    double getOrdinat(){
+        return ordinat;
+    }
+
+    static double getCounterTitik(){
+        return counterTitik;
+
+    }
 }
