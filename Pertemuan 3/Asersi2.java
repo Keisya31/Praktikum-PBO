@@ -5,6 +5,7 @@ class Lingkaran {
     private double jariJari;
     public Lingkaran(double jariJari){
         this.jariJari = jariJari;
+        assert(jariJari > 0): "Jari-jari tidak boleh noll!";
     }
     public double hitungkeliling(){
         double keliling = 2 * Math.PI * jariJari;
@@ -15,7 +16,6 @@ class Lingkaran {
 public class Asersi2{
     public static void main(String[] args){
         double jariJari = 0;
-        assert(jariJari > 0): "Jari-jari tidak boleh noll!";
         Lingkaran l = new Lingkaran(jariJari);
         double kelilingLingkaran = l.hitungkeliling();
         System.out.println("keliling lingkaran = " + kelilingLingkaran);
